@@ -3,13 +3,13 @@ import "./App.css";
 
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
-import NavigationBar from "./NavigationBar/NavigationBar";
+import AppBar from "./AppBar/AppBar";
 
 class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <NavigationBar />
+        <AppBar />
       </MuiThemeProvider>
     );
   }

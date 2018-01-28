@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import "./NavigationBar.css";
+import "./AppBar.css";
 
-import AppBar from "material-ui/AppBar";
+import BaseAppBar from "material-ui/AppBar";
 
-class NavigationBar extends Component {
+class AppBar extends Component {
   render() {
     return (
-      <AppBar
+      <BaseAppBar
         title="Barbell Ninja"
         iconClassNameRight="muidocs-icon-navigation-expand-more"
       />
@@ -14,4 +14,4 @@ class NavigationBar extends Component {
   }
 }
 
-export default NavigationBar;
+export default AppBar;
