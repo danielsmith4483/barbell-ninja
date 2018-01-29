@@ -4,6 +4,10 @@ import "./AppBar.css";
 import BaseAppBar from "material-ui/AppBar";
 
 class AppBar extends Component {
+  constructor() {
+    super();
+  }
+
   render() {
     return (
       <BaseAppBar
