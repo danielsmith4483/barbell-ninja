@@ -1,18 +1,27 @@
 import React, { Component } from "react";
 
-import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
+import WeightPickerComponent from "../../Components/WeightPickerComponent";
 
 class QuickCalculation extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {weight: 0};
+
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(value) {
+    if (this.state.weight !== value) {
+     this.setState({weight: value});
+    }
+  }
+
   render() {
     return (
       <div>
-        <TextField
-          hintText="225"
-          floatingLabelText="Enter weight"
-        />
-
-       <RaisedButton label="Calculate" primary={true} />
+        <WeightPickerComponent onChange={this.onChange} />
+        {this.state.weight}
       </div>
     );
   }
