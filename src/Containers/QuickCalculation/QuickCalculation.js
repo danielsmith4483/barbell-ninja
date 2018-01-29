@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import WeightPickerComponent from "../../Components/WeightPickerComponent";
+import PlateCombinationComponent from "../../Components/PlateCombinationComponent";
 
 class QuickCalculation extends Component {
   constructor(props) {
@@ -21,7 +22,8 @@ class QuickCalculation extends Component {
     return (
       <div>
         <WeightPickerComponent onChange={this.onChange} />
-        {this.state.weight}
+
+        <PlateCombinationComponent weight={this.state.weight} />
       </div>
     );
   }
