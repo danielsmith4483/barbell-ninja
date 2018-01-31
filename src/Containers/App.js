@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import "./App.css";
+import "Containers/App.css";
 
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import AppBar from "./AppBar/AppBar";
-import CardContainer from "./CardContainer/CardContainer";
-import QuickCalculation from "./QuickCalculation/QuickCalculation";
+import AppBar from "Containers/AppBar";
+import CardContainer from "Containers/CardContainer";
+import QuickCalculation from "Containers/QuickCalculation";
 
 class App extends Component {
   render() {
