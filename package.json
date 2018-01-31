@@ -20,5 +20,8 @@
     "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "npm run build && firebase deploy"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.3"
   }
 }
