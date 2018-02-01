@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import AppBar from "Containers/AppBar";
 import CardContainer from "Containers/CardContainer";
-import QuickCalculation from "Containers/QuickCalculation";
+import CalculatorContainer from "Containers/CalculatorContainer";
 
 class App extends Component {
   render() {
@@ -17,7 +17,7 @@ class App extends Component {
           <div>
             <AppBar />
             <Route exact path="/" component={CardContainer} />
-            <Route path="/quick" component={QuickCalculation} />
+            <Route path="/quick" component={CalculatorContainer} />
           </div>
         </Router>
       </MuiThemeProvider>
