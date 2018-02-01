@@ -7,13 +7,13 @@ class WeightPickerComponent extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {weight: 0};
+    this.state = { chosenWeight: 0 };
 
     this.onChangeText = this.onChangeText.bind(this);
   }
 
   onChangeText(event, newValue) {
-    this.setState({weight: newValue});
+    this.setState({ chosenWeight: newValue });
   }
 
   render() {
@@ -26,9 +26,9 @@ class WeightPickerComponent extends Component {
         />
 
         <RaisedButton
-          label="Calculate" 
-          primary={true} 
-          onClick={() => this.props.onChange(this.state.weight)}
+          label="Calculate"
+          primary={true}
+          onClick={() => this.props.onChange(this.state.chosenWeight)}
         />
       </div>
     );
