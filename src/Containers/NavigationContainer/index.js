@@ -7,7 +7,7 @@ import { ConnectedRouter } from "react-router-redux";
 import { Route } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
-import AppBar from "Containers/AppBar";
+import AppBarContainer from "Containers/AppBarContainer";
 
 const mapStateToProps = state => {
   return {
@@ -25,7 +25,7 @@ class NavigationContainer extends Component {
   render() {
     return (
       <ConnectedRouter history={this.props.history}>
-        <Route component={AppBar} />
+        <Route component={AppBarContainer} />
       </ConnectedRouter>
     );
   }

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./AppBar.css";
 
 import BaseAppBar from "material-ui/AppBar";
 import TouchRipple from "material-ui/internal/TouchRipple";
@@ -20,7 +19,7 @@ const mapDispatchToProps = dispatch => {
     dispatch
   };
 };
-class AppBar extends Component {
+class AppBarContainer extends Component {
   render() {
     return (
       <BaseAppBar
@@ -36,4 +35,4 @@ class AppBar extends Component {
   }
 }
 
-export default withRouter(connect(null, mapDispatchToProps)(AppBar));
+export default withRouter(connect(null, mapDispatchToProps)(AppBarContainer));
