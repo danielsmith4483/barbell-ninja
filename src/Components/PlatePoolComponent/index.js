@@ -13,10 +13,6 @@ const styles = {
 
 const newPlates = (oldPlates, plateToRemove) => {
   const index = oldPlates.map(p => p.weight).indexOf(plateToRemove);
-  console.log(oldPlates.map(p => p.weight));
-  console.log(index);
-  console.log(plateToRemove);
-  console.log(oldPlates);
   const newCount = Math.max(oldPlates[index].count - 2, 0);
 
   const plate = oldPlates[index];
@@ -32,11 +28,8 @@ const maxUsablePlate = (availablePlates = [], weight) => {
     .filter(q => q.weight <= weight);
 
   if (candidates && candidates.length) {
-    console.log("oy");
-    console.log(Math.max.apply(Math, candidates.map(o => o.weight)));
     return Math.max(Math.max.apply(Math, candidates.map(o => o.weight)), 0);
   }
-  console.log("yo");
   return 0;
 };
 
@@ -48,10 +41,8 @@ class PlatePoolComponent extends Component {
     );
 
     if (plateToUse <= 0) {
-      console.log("hello");
       return <div />;
     } else {
-      console.log(plateToUse);
     }
 
     if (this.props.weight > 0) {
