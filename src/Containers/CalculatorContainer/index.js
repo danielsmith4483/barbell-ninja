@@ -4,11 +4,12 @@ import { connect } from "react-redux";
 import { setChosenWeight } from "Containers/CalculatorContainer/actions";
 
 import WeightPickerComponent from "Components/WeightPickerComponent";
-import PlateCombinationComponent from "Components/PlateCombinationComponent";
+import PlatePoolComponent from "Components/PlatePoolComponent";
 
 const mapStateToProps = state => {
   return {
-    chosenWeight: state.chosenWeight
+    chosenWeight: state.chosenWeight,
+    availablePlates: state.availablePlates
   };
 };
 
@@ -18,13 +19,24 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+const excludeBar = weight => {
+  return weight - 45;
+};
+
+const excludeHalf = weight => {
+  return weight / 2;
+};
+
 class CalculatorContainer extends Component {
   render() {
     return (
       <div>
         <WeightPickerComponent onChange={this.props.setChosenWeight} />
 
-        <PlateCombinationComponent weight={this.props.chosenWeight} />
+        <PlatePoolComponent
+          weight={Math.max(excludeHalf(excludeBar(this.props.chosenWeight)), 0)}
+          availablePlates={this.props.availablePlates}
+        />
       </div>
     );
   }

@@ -2,25 +2,6 @@ import React, { Component } from "react";
 
 class PlateCombinationComponent extends Component {
   constructor(props) {
-    super(props);
-
-    this.state = {
-      barbell: 45,
-
-      plates: {
-        45: 8,
-        35: 2,
-        25: 2,
-        10: 4,
-        5: 2,
-        2.5: 2,
-        1.25: 2
-      }
-    };
-
-    this.getPlates = this.getPlates.bind(this);
-  }
-
   getPlates() {
     let weight = this.props.weight;
     const output = [];
