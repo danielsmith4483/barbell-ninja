@@ -5,7 +5,10 @@ import { withRouter } from "react-router-dom";
 
 import Drawer from "material-ui/Drawer";
 
-import { toggleDrawer } from "Containers/AppBarContainer/actions";
+import {
+  toggleDrawer,
+  setDrawerState
+} from "Containers/AppBarContainer/actions";
 
 const mapStateToProps = state => {
   return {
@@ -16,6 +19,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     toggleDrawer: () => dispatch(toggleDrawer()),
+    setDrawerState: drawerState => dispatch(setDrawerState(drawerState)),
     dispatch
   };
 };
@@ -27,7 +31,7 @@ class DrawerContainer extends Component {
         docked={false}
         width={200}
         open={this.props.drawerOpened}
-        onRequestChange={() => this.props.toggleDrawer()}
+        onRequestChange={open => this.props.setDrawerState(open)}
       />
     );
   }
