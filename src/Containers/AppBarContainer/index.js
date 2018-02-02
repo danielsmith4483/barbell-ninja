@@ -7,6 +7,8 @@ import { connect } from "react-redux";
 import { push } from "react-router-redux";
 import { withRouter } from "react-router-dom";
 
+import { toggleDrawer } from "Containers/AppBarContainer/actions";
+
 const styles = {
   title: {
     cursor: "pointer"
@@ -16,9 +18,11 @@ const styles = {
 const mapDispatchToProps = dispatch => {
   return {
     changeRoute: url => dispatch(push(url)),
+    toggleDrawer: () => dispatch(toggleDrawer()),
     dispatch
   };
 };
+
 class AppBarContainer extends Component {
   render() {
     return (
@@ -29,6 +33,7 @@ class AppBarContainer extends Component {
           </TouchRipple>
         }
         onTitleClick={() => this.props.changeRoute("/")}
+        onLeftIconButtonClick={() => this.props.toggleDrawer()}
         iconClassNameRight="muidocs-icon-navigation-expand-more"
       />
     );
