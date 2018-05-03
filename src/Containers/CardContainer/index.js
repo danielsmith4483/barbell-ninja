@@ -16,7 +16,18 @@ class CardContainer extends Component {
           />
           <CardActions>
             <Link to={"/quick"}>
-              <RaisedButton label="Calculate Now" primary={true} />
+              <RaisedButton label="Quick" primary={true} />
+            </Link>
+          </CardActions>
+        </Card>
+        <Card>
+          <CardHeader
+            title="Rep Max Calculator"
+            subtitle="Calculate your one-rep max (or n-rep max) for a given weight and rep count."
+          />
+          <CardActions>
+            <Link to={"/rep-max"}>
+              <RaisedButton label="1RM" primary={true} />
             </Link>
           </CardActions>
         </Card>

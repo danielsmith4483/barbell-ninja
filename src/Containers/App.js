@@ -9,6 +9,7 @@ import { Route } from "react-router-dom";
 import NavigationContainer from "Containers/NavigationContainer";
 import CardContainer from "Containers/CardContainer";
 import CalculatorContainer from "Containers/CalculatorContainer";
+import RepMaxContainer from "Containers/RepMaxContainer";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route component={NavigationContainer} />
             <Route exact path="/" component={CardContainer} />
             <Route path="/quick" component={CalculatorContainer} />
+            <Route path="/rep-max" component={RepMaxContainer} />
           </div>
         </ConnectedRouter>
       </MuiThemeProvider>
