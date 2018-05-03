@@ -6,6 +6,8 @@ import { setChosenWeight, setChosenReps } from "Containers/RepMaxContainer/actio
 import WeightPickerComponent from "Components/WeightPickerComponent";
 import RepPickerComponent from "Components/RepPickerComponent";
 
+import { repMax } from 'rep-max';
+
 const mapStateToProps = state => {
   return {
     chosenWeight: state.chosenWeight,
@@ -26,8 +28,6 @@ class RepMaxContainer extends Component {
       <div>
         <WeightPickerComponent onChange={this.props.setChosenWeight} />
         <RepPickerComponent onChange={this.props.setChosenReps} />
-
-        {this.props.chosenWeight + this.props.chosenReps}
       </div>
     );
   }
